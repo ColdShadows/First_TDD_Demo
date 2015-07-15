@@ -11,12 +11,18 @@ namespace First_TDD_Demo
         public string DoTheThing(int num)
         {
             string answer = "";
-            if (num % 3 != 0 && num % 5 != 0)
+            if (num % 3 == 0 && num % 15 == 0)
+                answer = "FizzBuzz";
+            else if (num % 3 != 0 && num % 5 != 0)
                 answer = num.ToString();
-            else
-                answer = "no";
+            else if (num % 3 == 0)
+                answer = "Fizz";
+            else if (num % 5 == 0)
+                answer = "Buzz";
+            
 
             return answer;
         }
+       
     }
 }
